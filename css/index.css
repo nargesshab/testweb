@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ECE6DE;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  color: black;
+ 
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+}
+
+.horizontal-child {
+  position: relative;
+  display: block;
+  width: 100vh;
+  height: 100vw;
+  overflow: scroll;
+  transform-origin: 100% 0%;
+  transform: rotate(-90deg) translateY(-100vh);
+}
+
+.horizontal-child .slide {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 0 0 0;
+  transform-origin: 0% 0%;
+  columns: 600px;
+  column-gap: 0;
+  font-size: 1.3rem;
+  transform: rotate(90deg) translateY(-100%);
+}
+
+
+a {
+  text-decoration:none;
+  color: black;
+  font-size: 1em;
+}
+li {
+  list-style:none;
+  color: black;
+}
+.main-nav {
+  width:100vh;    
+  height:60px;
+
+  padding: 10px;
+
+  position:fixed;
+  transform-origin: left top;
+  border: 1px solid black;
+  transform-origin: left top;
+  transform:rotate(-90deg) translateX(-100%);
+}
+
+ul.nav li {    
+  margin:35px 20px;
+  float:right;
+  height:100%;
+  line-height:45px;  
+}
+
+.main-img {
+  max-width: 800px;
+  max-height: 100vh;
+  margin-left: 100px;
+}
+
+.content-item {
+  min-width:50%;
+  min-height: 100vh;
+  background-color: #ECE6DE;
+  margin-left: 0px;
+  display: inline-flex;
+  color: black;
+  vertical-align: top;
+  margin: 0;
+  
+}
+
+.about {
+  background-color: #ECE6DE;
+}
+.about-name{
+  display: flex;
+  flex-flow: column wrap;
+
+  background-color: black;
+  color: white;
+  max-width: 100%;
+  max-height: 506px;
+  
+  margin-bottom: 120px;
+}
+.about-quote {
+  display: flex;
+  flex-flow: column wrap;
+
+  background-color: black;
+  color: white;
+  max-width: 100%;
+  max-height: 170px;
+  padding: 30px auto 30px 105px;
+
+}
+.about-contact {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #ECE6DE;
+  color: black;
+}
+
+/* the elements */
+.arrow.white {
+  display: inline-flex;
+  max-width: 255px;
+  max-height: 255px;
+  transform: rotateZ(-90deg);
+  justify-content: flex-end;
+  margin-top: 80%;
+  margin-right: 80%;
+}
+.Recent,
+.content-item.ux-ui,
+.content-item.typography,
+.content-item.game-design {
+
+  min-width: 50%;
+  min-height:100%;
+  background-color: black;
+  color: #ECE6DE;
+
+}
+
+.content-item.img-side {
+  min-width: 20%;
+  min-height:100%;
+  background-image: url(../img/main-logo-lead.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+/*recent.css content with fix!*/
+
+h1 {
+  font-size: 2em;
+  padding: 50px 30px 30px 50px;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: #ECE6DE;
+}
+
+/* these are the images style */
+.accordion {
+  
+  min-width: 300px;
+ 
+  overflow: hidden;
+  margin: 0px auto;
+}
+.accordion article {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion article section {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion article section div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion article section div a {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+.accordion article section div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-20px);
+  transition: all 1.5s ease-in-out;
+}
+.accordion article section div a h2 {
+  font-family: sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion article section div a p {
+  top: 200px;
+  font-size: 13.5px;
+}
+/**/
+.accordion article section:nth-child(1) {
+  /*fix image path*/
+  background-image: url(../img/1.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion article section:nth-child(2) {
+/*fix image path*/
+  background-image: url(../img/2.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion article section:nth-child(3) {
+	/*fix image path*/
+  background-image: url(../img/3.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion article section:nth-child(4) {
+	/*fix image path*/
+  background-image: url(../img/4.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  
+}
+.accordion article:hover section, .accordion article:focus-within section {
+  width: 8%;
+}
+.accordion article section:focus {
+  outline: none;
+}
+.accordion article:hover section:hover,
+.accordion article section:focus, .accordion article:focus-within section:focus {
+  width: 90%;
+}
+.accordion article:hover section:hover a,
+.accordion article section:focus a, .accordion article:focus-within section:focus a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion article:hover section:hover a *,
+.accordion article section:focus a *, .accordion article:focus-within section:focus a * {
+  opacity: 1;
+  transform: translateX(0);
+}
+.accordion article:hover section {
+  width: 8% !important;
+}
+.accordion article:hover section a * {
+  opacity: 0 !important;
+}
+.accordion article:hover section:hover {
+  width: 90% !important;
+}
+.accordion article:hover section:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion article:hover section:hover a * {
+  opacity: 1 !important;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: auto;
+  }
+  .accordion article section, .accordion article section:hover, .accordion article:hover section, .accordion article:hover section:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+}
+.about {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* the page of Digital typography */
+
+.accordion2 article section:nth-child(1) {
+  /*fix image path*/
+  background-image: url(../img/6.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion2 article section:nth-child(2) {
+/*fix image path*/
+  background-image: url(../img/7.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion2 article section:nth-child(3) {
+	/*fix image path*/
+  background-image: url(../img/8.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.accordion2 article section:nth-child(4) {
+	/*fix image path*/
+  background-image: url(../img/9.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  
+}
+
+
+
+
+
+
+
+
+
